@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.0.0/dist/siimple.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact List</title>
+</head>
+
+<body>
+    <section id="main" class="siimple-grid">
+        <header class="siimple-navbar">
+            <h1 id="title"> CONTACT LIST </h1>
+        </header>
+        <section>
+            <ul class="siimple-grid-row">
+                <li id="person" class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col--3" v-for="item in results">
+                    <img v-bind:src="item.picture.large" v-bind:alt="item.name.first">
+                    <h2>Name: {{item.name.first}} {{item.name.last}}</h2>
+                    <p>Gender: {{ item.gender }}</p>
+                    <p>Email: {{item.email}}</p>
+                    <p>Cell Phone: {{item.cell}}</p>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <script src="jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
