@@ -13,16 +13,16 @@
 <body>
     <section id="main" class="siimple-grid">
         <header class="siimple-navbar">
-            <h1 id="title"> CONTACT LIST </h1>
+            <h1 id="title"> Random Contacts Viewer </h1>
         </header>
         <section>
-            <ul class="siimple-grid-row">
-                <li id="person" class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col--3" v-for="item in results">
+            <ul class="flex-container">
+                <li id="person" class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col--3 contact" v-if="results" v-for="item in results">
                     <img v-bind:src="item.picture.large" v-bind:alt="item.name.first">
-                    <h2>Name: {{item.name.first}} {{item.name.last}}</h2>
-                    <p>Gender: {{ item.gender }}</p>
-                    <p>Email: {{item.email}}</p>
-                    <p>Cell Phone: {{item.cell}}</p>
+                    <h2>{{item.name.first}} {{item.name.last}}</h2>
+                    <p v-bind:class="item.gender" class="gender">{{ item.gender }}</p>
+                    <p>{{item.email}}</p>
+                    <p>{{item.cell}}</p>
                 </li>
             </ul>
         </section>

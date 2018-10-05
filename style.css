@@ -2,7 +2,17 @@ body, html {
     text-align: center;
     margin: 0;
     padding: 0;
+    background: #4d4d4d;
+}
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.siimple-navbar {
+    height: auto;
 }
 
 img {
@@ -18,4 +28,41 @@ h1 {
     padding: 15px 0px;
     margin: 0;
     color: ghostwhite;
+    font-size: 2rem;
 }
+
+.male {
+    color: #1bf;
+}
+.female {
+    color: #f77;
+}
+
+.gender {
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.contact {
+    background: #666;
+    padding: 15px;
+    margin: 5px;
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    color: #efefef;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.15))
+}
+
+.contact p {
+    margin: 2px 0px;
+    font-weight: 600;
+}
+
+.contact h2 {
+    font-size: 1.5rem;
+    margin: 2px 0px;
+    text-transform: capitalize;
+}
+
